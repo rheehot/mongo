@@ -5,7 +5,6 @@ const mongo = require('mongodb').MongoClient
 const url = 'mongodb://localhost:27017';
 
 
-
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -32,7 +31,7 @@ mongo.connect(url, (err,client)=>{
     })
 
     // db 내용 삭제 부분
-    collection.deleteOne({name:"또르 "}, (err,item)=>{
+    collection.deleteOne({name:"또르"}, (err,item)=>{
         console.log(item)
     })
 
